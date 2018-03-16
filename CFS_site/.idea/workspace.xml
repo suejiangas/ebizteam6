@@ -14,17 +14,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Carnegie_Financial_Services.htm" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Carnegie_Financial_Services.htm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Carnegie_Financial_Services.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="211" column="94" lean-forward="false" selection-start-line="211" selection-start-column="94" selection-end-line="211" selection-end-column="94" />
+            <state relative-caret-position="1710">
+              <caret line="211" column="66" lean-forward="false" selection-start-line="211" selection-start-column="66" selection-end-line="211" selection-end-column="66" />
               <folding>
                 <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#8467#8472#0" expanded="true" />
-                <element signature="e#10181#10187#1" expanded="true" />
+                <element signature="e#8523#8528#0" expanded="true" />
+                <element signature="e#10237#10243#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -40,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Carnegie_Financial_Services_Mortgage.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Carnegie_Financial_Services_Mortgage.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Carnegie_Financial_Services_Mortgage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="118" column="44" lean-forward="false" selection-start-line="118" selection-start-column="44" selection-end-line="118" selection-end-column="44" />
+            <state relative-caret-position="105">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
               </folding>
@@ -65,8 +65,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/1250_copy.html" />
-        <option value="$PROJECT_DIR$/Carnegie_Financial_Services_Mortgage.html" />
         <option value="$PROJECT_DIR$/Carnegie_Financial_Services.htm" />
+        <option value="$PROJECT_DIR$/Carnegie_Financial_Services_Mortgage.html" />
       </list>
     </option>
   </component>
@@ -154,7 +154,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11204000" />
+    <option name="totallyTimeSpent" value="12095000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="1280" height="773" extended-state="6" />
@@ -208,8 +208,8 @@
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#8467#8472#0" expanded="true" />
-            <element signature="e#10181#10187#1" expanded="true" />
+            <element signature="e#8523#8528#0" expanded="true" />
+            <element signature="e#10237#10243#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -243,13 +243,27 @@
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#8467#8472#0" expanded="true" />
-            <element signature="e#10181#10187#1" expanded="true" />
+            <element signature="e#8523#8528#0" expanded="true" />
+            <element signature="e#10237#10243#1" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/1250_copy.html" />
+    <entry file="file://$PROJECT_DIR$/Carnegie_Financial_Services.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1710">
+          <caret line="211" column="66" lean-forward="false" selection-start-line="211" selection-start-column="66" selection-end-line="211" selection-end-column="66" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#8523#8528#0" expanded="true" />
+            <element signature="e#10237#10243#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Carnegie_Financial_Services_Deposit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1494">
@@ -260,24 +274,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Carnegie_Financial_Services_Mortgage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="118" column="44" lean-forward="false" selection-start-line="118" selection-start-column="44" selection-end-line="118" selection-end-column="44" />
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Carnegie_Financial_Services.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="211" column="94" lean-forward="false" selection-start-line="211" selection-start-column="94" selection-end-line="211" selection-end-column="94" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#8467#8472#0" expanded="true" />
-            <element signature="e#10181#10187#1" expanded="true" />
           </folding>
         </state>
       </provider>
