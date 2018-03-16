@@ -17,14 +17,14 @@
       <file leaf-file-name="Carnegie_Financial_Services.htm" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Carnegie_Financial_Services.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1434">
-              <caret line="123" column="61" lean-forward="false" selection-start-line="123" selection-start-column="61" selection-end-line="123" selection-end-column="61" />
+            <state relative-caret-position="274">
+              <caret line="211" column="94" lean-forward="false" selection-start-line="211" selection-start-column="94" selection-end-line="211" selection-end-column="94" />
               <folding>
                 <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#8334#8339#0" expanded="true" />
-                <element signature="e#10048#10054#1" expanded="true" />
+                <element signature="e#8467#8472#0" expanded="true" />
+                <element signature="e#10181#10187#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -65,8 +65,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/1250_copy.html" />
-        <option value="$PROJECT_DIR$/Carnegie_Financial_Services.htm" />
         <option value="$PROJECT_DIR$/Carnegie_Financial_Services_Mortgage.html" />
+        <option value="$PROJECT_DIR$/Carnegie_Financial_Services.htm" />
       </list>
     </option>
   </component>
@@ -119,6 +119,11 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -149,13 +154,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10735000" />
+    <option name="totallyTimeSpent" value="11204000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="1280" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.103125" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1609375" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -203,8 +208,8 @@
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#8334#8339#0" expanded="true" />
-            <element signature="e#10048#10054#1" expanded="true" />
+            <element signature="e#8467#8472#0" expanded="true" />
+            <element signature="e#10181#10187#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -238,8 +243,8 @@
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#8334#8339#0" expanded="true" />
-            <element signature="e#10048#10054#1" expanded="true" />
+            <element signature="e#8467#8472#0" expanded="true" />
+            <element signature="e#10181#10187#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -265,14 +270,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Carnegie_Financial_Services.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1434">
-          <caret line="123" column="61" lean-forward="false" selection-start-line="123" selection-start-column="61" selection-end-line="123" selection-end-column="61" />
+        <state relative-caret-position="274">
+          <caret line="211" column="94" lean-forward="false" selection-start-line="211" selection-start-column="94" selection-end-line="211" selection-end-column="94" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#8334#8339#0" expanded="true" />
-            <element signature="e#10048#10054#1" expanded="true" />
+            <element signature="e#8467#8472#0" expanded="true" />
+            <element signature="e#10181#10187#1" expanded="true" />
           </folding>
         </state>
       </provider>
