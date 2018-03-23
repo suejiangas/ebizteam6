@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Carnegie Financial Services, Mortgage" />
+    <meta name="keywords" content="Online Banking Financial Services Mortgage" />
+    <title>Carnegie Financial Services, Mortgage</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+    <style type="text/css">
+        <!--
+        .style1 {color: #990000}
+        .style3 {color: #0000FF; }
+        .style5 {color: #990000; font-size: 12px; }
+        -->
+        /*html, body{*/
+        /*font-family: 'Exo 2', sans-serif;*/
+        /*margin: 0;*/
+        /*padding: 0;*/
+        /*}*/
+
+        body {
+            margin:0;
+            padding:0;
+            font-family: sans-serif;
+        }
+
+        header {
+            background:#990000;
+            /*#00795f;*/
+            width:100%;
+            padding: 40px 0;
+            color:white;
+            text-align:center;
+        }
+
+        a {
+            text-decoration:none;
+            color:inherit;
+        }
+
+        nav ul {
+            background-color: black;
+            /*#43a286;*/
+            overflow: hidden;
+            color:white;
+            padding: 0;
+            text-align: center;
+            margin:0;
+            -webkit-transition: max-height 0.4s;
+            -ms-transition: max-height 0.4s;
+            -moz-transition: max-height 0.4s;
+            -o-transition: max-height 0.4s;
+            transition: max-height 0.4s;
+        }
+
+        nav ul li {
+            display:inline-block;
+            padding: 20px;
+
+        }
+
+        nav ul li:hover {
+            background-color: #399077;
+        }
+
+        section {
+            line-height: 1.5em;
+            font-size: 0.9em;
+            padding: 40px;
+            width: 75%;
+            margin: 0 auto;
+        }
+
+        .handle {
+            width:100%;
+            background: #005c48;
+            text-align: left;
+            box-sizing: border-box;
+            padding: 15px 10px;
+            cursor:pointer;
+            color:white;
+            display:none
+        }
+
+        @media screen and (max-width:600px) {
+            nav ul {
+                max-height:0;
+            }
+
+            .showing {
+                max-height: 20em;
+            }
+
+            nav ul li {
+                box-sizing:border-box;
+                width:100%;
+                padding:15px;
+                text-align:center;
+            }
+
+            .handle {
+                display:block;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+<header>
+    <h1>Carnegie Financial Services - Savings</h1>
+</header>
+<nav>
+    <ul>
+        <a href="Carnegie_Financial_Services.htm"><li>Home</li></a>
+        <a href="Carnegie_Financial_Services_Checking.html"><li>Checking</li></a>
+        <a href="Carneie_Financial_Services_Savings.html"><li>Savings</li></a>
+        <a href="Carnegie_Financial_Services_Deposit.html"><li>Certificate of Deposit</li></a>
+        <a href="#"><li>Loans</li></a>
+        <a href="Carnegie_Financial_Services_Mortgage.html"><li>Mortgages</li></a>
+    </ul>
+    <div class="handle">Menu</div>
+</nav>
+<table width="90%" border="0" cellspacing="4" cellpadding="4" style="text-align: center">
+    <tr>
+        <td width="90%" style="center">
+            <p align="left" class="TitleColor">
+                <span class="style1">
+                    <strong>Savings at Carnegie Financials</strong>
+                </span>
+                We offer the best savings accounts. Put your money in one simple savings account and get all the benefits. Save more, Live more</td>
+    </tr>
+</table>
+<hr>
+<hr>
+<p class="style5">Carnegie Financial Services&reg; is a registered trademark of Carnegie Mellon University.</p>
+
+</body>
+</html>
+
+<!--url -->
+<!--title-->
+<!--meta (description, keywords)-->
+<!--alt-->
+<!--inlink (href: anchor text)-->
+<!--body-->
