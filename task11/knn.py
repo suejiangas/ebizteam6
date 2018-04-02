@@ -1,4 +1,5 @@
-# import csv
+import sys
+import xlrd
 import random
 import math
 import operator
@@ -6,10 +7,51 @@ import arff, numpy as np
 
 TRAIN_FILE_NAME_A = 'trainProdSelection.arff'
 TEST_FILE_NAME_A = 'testProdSelection.arff'
-# CONTINUEOUS_ATTRIBUTES_FLAG_A  = [False, False, True, True, True, True]
-# SYMBOL_ATTRIBUTES_FLAG_A = [True, True, False, False, False, False]
 
-# SIMILARITY_MATRIX_CUSTOMER_TYPE = array([])
+TRAIN_FILE_NAME_B = 'trainProdIntro.binary.arff'
+TEST_FILE_NAME_B = 'testProdIntro.binary.arff'
+
+SIMILARITY_MATRIX_FILE_NAME = 'similaritymatrixUpdatedVersion.xls'
+
+SIMILARITY_MATRIX = {'Type' : ([[1,0,0,0,0],
+								[0,1,0,0,0],
+								[0,0,1,0,0],
+								[0,0,0,1,0],
+								[0,0,0,0,1]]),
+					 'LifeStyle' : ([[1,0,0,0],
+					 				 [0,1,0,0],
+					 				 [0,0,1,0],
+					 				 [0,0,0,1]]),
+
+					 'Service_type' : ([1, 0, 0.1, 0.3, 0.2],
+					 				   [0, 1, 0, 0, 0],
+					 				   [0.1, 0, 1, 0.2, 0.2],
+					 				   [0.3, 0, 0.2, 1, 0.2],
+					 				   [0.2, 0, 0.2, 0.1, 1]),
+
+					 'Customer': ([1, 0.2, 0.1, 0.2, 0],
+					 			  [0.2, 1, 0.2, 0.1, 0],
+					 			  [0.1, 0.2, 1, 0.1, 0],
+					 			  [0.2, 0.1, 0.1, 1, 0],
+					 			  [0, 0, 0, 0, 1]),
+
+					 'Size': ([1, 0.1, 0],
+					 	      [0.1, 1, 0.1],
+					 	      [0, 0.1, 1]),
+
+					 'Promotion': ([1, 0.8, 0, 0],
+					 			   [0.8, 1, 0.1, 0.5],
+					 			   [0, 0.1, 1, 0.4],
+					 			   [0, 0.5, 0.4, 1])
+					 }
+SYMBOLIC_MAP = {'Type' : {'student':0, 'engineer': 1, 'librarian': 2, 'professor' : 3, 'doctor': 4},
+				'LifeStyle': {'spend<<saving': 0, 'spend<saving': 1, 'spend>saving':2, 'spend>>saving':3},
+				'Service_type': {'Loan': 0, 'Bank_Account': 1, 'CD': 2, 'Mortgage':3, 'Fund':4},
+				'Customer' : {'Business':0, 'Professional':1, 'Student':2, 'Doctor':3, 'Other':4},
+				'Size': {'Small':0, 'Medium':1, 'Large':2},
+				'Promotion': {'Full':0, 'Web&Email':1, 'Web':2, 'None':3}
+				}
+
 
 def load_data_set(filename, split, train_set=[] , test_set=[], attributes=[]):
 	with open(filename, 'rb') as f:
@@ -18,6 +60,7 @@ def load_data_set(filename, split, train_set=[] , test_set=[], attributes=[]):
 
 		data = list(dataset['data'])
 		attr = list(dataset['attributes'])
+		# print attr
 		
 		for x in range(len(data) - 1):
 			if random.random() < split:
@@ -61,13 +104,31 @@ def normalize_data(data_set, attributes, min_values, max_values):
 				data_set[x][y] = (data_set[x][y] - min_values[y]) / (max_values[y] - min_values[y])
 
 
-def normalize_train_and_test_data(train_set, test_set, attributes):
+def normalize_continuous_data(train_set, test_set, attributes):
 	min_values = [0] * len(test_set[0])
 	max_values = [0] * len(test_set[0])
 
 	calculate_min_max_values(train_set, attributes, min_values, max_values)
 	normalize_data(train_set, attributes, min_values, max_values)
 	normalize_data(test_set, attributes, min_values, max_values)
+
+
+def convert_symbolic_data(data_set, attributes):
+	"""
+	For each symbolic value, convert the symbol into its index according attribute definition.
+	E.g. For problem B, if the 'Service_type' is 'Loan', the converted value should be 1.
+		 The reason is, in attribute definition, the value range of 'Service_type' is:
+		 ['Fund', 'Loan', 'CD', 'Bank_Account', 'Mortgage'], and the index of 'Loan' is 1
+	"""
+	for x in range(len(data_set)):
+		for y in range(len(attributes) - 1):
+			if attributes[y][1] != 'REAL':
+				data_set[x][y] = SYMBOLIC_MAP[attributes[y][0]][data_set[x][y]]
+
+				# for i in range(len(attributes[y][1])):
+				# 	if data_set[x][y] == attributes[y][1][i]:
+				# 		data_set[x][y] = i;
+				# 		break;
 
 def euclidean_distance(instance1, instance2, attributes, length):
 	distance = 0
@@ -76,14 +137,7 @@ def euclidean_distance(instance1, instance2, attributes, length):
 		if attributes[x][1] == 'REAL':
 			distance += abs(instance1[x] - instance2[x])**2
 		else:
-			"""
-			For simplicity, the similarity of two symbolic attributes set to 1 if they are equal with each other,
-			and set to 0 if not. This is according to similarity matrix given by the professor.
-
-			In the future, if the similarity matrix got changed, the similarity may need to read and abstract directly
-			from the .xlsx file, so refactor may needed here.
-			"""
-			similarity = int(instance1[x] == instance2[x])
+			similarity = SIMILARITY_MATRIX[attributes[x][0]][instance1[x]][instance2[x]]
 			distance += 1 - similarity
 	return 1/math.sqrt(distance)
 
@@ -134,14 +188,37 @@ def get_accuracy(test_labels, predictions):
 			correct += 1
 	return (correct/float(len(test_labels))) * 100.0
 	
-def main():
+
+def read_similarity_matrix(problem):
+	data = xlrd.open_workbook(SIMILARITY_MATRIX_FILE_NAME)
+	if problem == 'A':
+		 table = data.sheets()[0]
+		 # table = data.sheet_by_name('Task A')
+		 print table 
+	else :
+		 table = data.sheets()[1]	
+		 print table 	
+
+def main(argv):
+	if argv[1] == 'A':
+		filename = TRAIN_FILE_NAME_A
+		similarity_matrix = read_similarity_matrix('A')
+
+	elif argv[1] == 'B':
+		filename = TRAIN_FILE_NAME_B
+		similarity_matrix = read_similarity_matrix('B')
+	
+	else :
+		print "Invalid input"
+		return 
+
 	# prepare data
 	train_set=[]
 	test_set=[]
 	attributes=[]
 	split = 0.67
-	load_data_set(TRAIN_FILE_NAME_A, split, train_set, test_set, attributes)
-
+	load_data_set(filename, split, train_set, test_set, attributes)
+	print attributes
 	"""
 	Split the test data into test_set and test_labels.
 
@@ -154,7 +231,11 @@ def main():
 	test_set = [x[:-1] for x in (x for x in test_set)]
 
 	# normalize continuous data
-	normalize_train_and_test_data(train_set, test_set, attributes)
+	normalize_continuous_data(train_set, test_set, attributes)
+
+	# convert symbolic data
+	convert_symbolic_data(train_set, attributes)
+	convert_symbolic_data(test_set, attributes)
 
 	k = 3
 	predictions = []
@@ -167,10 +248,10 @@ def main():
 		predictions.append(result)
 		print('> predicted=' + result + ', actual=' + test_labels[x])
 
-	# calculate accuracy
+	# # calculate accuracy
 	accuracy = get_accuracy(test_labels, predictions)
 	print('Accuracy: ' + repr(accuracy) + '%')
 	
 
 if __name__ == '__main__':
-    main()
+    main(sys.argv)
