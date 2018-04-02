@@ -189,25 +189,21 @@ def get_accuracy(test_labels, predictions):
 	return (correct/float(len(test_labels))) * 100.0
 	
 
-def read_similarity_matrix(problem):
-	data = xlrd.open_workbook(SIMILARITY_MATRIX_FILE_NAME)
-	if problem == 'A':
-		 table = data.sheets()[0]
-		 # table = data.sheet_by_name('Task A')
-		 print table 
-	else :
-		 table = data.sheets()[1]	
-		 print table 	
+# def read_similarity_matrix(problem):
+# 	data = xlrd.open_workbook(SIMILARITY_MATRIX_FILE_NAME)
+# 	if problem == 'A':
+# 		 table = data.sheets()[0]
+# 		 # table = data.sheet_by_name('Task A')
+# 		 print table 
+# 	else :
+# 		 table = data.sheets()[1]	
+# 		 print table 	
 
 def main(argv):
 	if argv[1] == 'A':
 		filename = TRAIN_FILE_NAME_A
-		similarity_matrix = read_similarity_matrix('A')
-
 	elif argv[1] == 'B':
-		filename = TRAIN_FILE_NAME_B
-		similarity_matrix = read_similarity_matrix('B')
-	
+		filename = TRAIN_FILE_NAME_B	
 	else :
 		print "Invalid input"
 		return 
