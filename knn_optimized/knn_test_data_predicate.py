@@ -239,6 +239,7 @@ def knn_job(log_name, train_set, test_set, attributes, k, validation_fold,
         convert_symbolic_data(test_set, attributes)
 
         predictions = []
+        log_file = open(log_name, "a+")
 
         # calculate prediction
         for x in range(len(test_set)):
@@ -246,7 +247,6 @@ def knn_job(log_name, train_set, test_set, attributes, k, validation_fold,
                                         test_set[x],
                                         attributes, k,
                                         weights)
-
             if isBReal:
                 result = 0.0;
                 for i in range(len(neighbors)):
@@ -256,8 +256,10 @@ def knn_job(log_name, train_set, test_set, attributes, k, validation_fold,
             else:
                 result = predicate_class(neighbors)
                 predictions.append(result)
-
-            print('> attributes= ' + str(old_data[x])[1:-1] + ', predicted=' + str(result))
+            log_file.write('> attributes= ' + str(old_data[x])[1:-1] + ', predicted=' + str(result))
+            log_file.write('\r\n')
+            # print('> attributes= ' + str(old_data[x])[1:-1] + ', predicted=' + str(result))
+        log_file.close()
 
 def main(argv):
     if len(argv) < 3:
