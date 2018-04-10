@@ -1,4 +1,4 @@
-## TEAM6 Task 11 Data Mining - CRM Implementation
+# TEAM6 Task 11 Data Mining - CRM Implementation
 
 ## KNN
 
@@ -12,5 +12,3 @@ In order to get the predicton result, please run the program with command as fol
 python knn_test_data_predicate.py {train_data_file_name} {test_data_file_name}
 
 For example, by running command: python knn_test_predicate.py trainProdSelection.arff testProdSelection.arff, the predication result of problem A will be output into the log file.
-
-# Decision Tree
