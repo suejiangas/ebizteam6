@@ -15,3 +15,5 @@ argv[1] --> file name of train data
 argv[2] --> file name of test data
 
 For example, by running command: python knn_test_predicate.py trainProdSelection.arff testProdSelection.arff, the predication result of problem A will be output into the log file.
+
+After execution, check the log file "knn_log.txt" to view the prediction results.
