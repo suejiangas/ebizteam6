@@ -6,7 +6,6 @@
 @attribute eCredit real
 @attribute salary real
 @attribute property real
-@attribute label {C1,C2,C3,C4,C5}
 
 @data
 student,spend<saving,12,19,14.79,3.7697

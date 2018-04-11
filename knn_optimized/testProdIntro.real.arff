@@ -8,7 +8,6 @@
 @attribute Promotion {Web&Email,Full,Web,None}
 @attribute Interest_rate real
 @attribute Period real
-@attribute Label real
 
 @data
 Fund,Student,0.75,0.93,Small,Web&Email,1,5
