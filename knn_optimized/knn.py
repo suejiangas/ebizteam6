@@ -100,15 +100,12 @@ def split_test_and_train_set(old_data,
         train_set.append(data[x])
 
     """
-		In order to make the program workable for both Problem A and B, 
+		In order to make the program workable for both Problem A and B,
 		the attributes information of data are return here.
-
 		For .arff file, the format of each attribute colume will be (colume_name, colume_type).
-
 		If the columne type is 'REAL', it is a numeric attribute, we treat it as continuous value
 		and will be normalized into range [0, 1] before calculating distance.
-
-		Otherwise, the column will be treated as a symbolic attribute. 
+		Otherwise, the column will be treated as a symbolic attribute.
 		"""
 
 
@@ -255,10 +252,10 @@ def get_accuracy(test_labels, predictions):
 # 	if problem == 'A':
 # 		 table = data.sheets()[0]
 # 		 # table = data.sheet_by_name('Task A')
-# 		 print table 
+# 		 print table
 # 	else :
-# 		 table = data.sheets()[1]	
-# 		 print table 	
+# 		 table = data.sheets()[1]
+# 		 print table
 
 
 def knn_job(log_name, data, attributes, k, validation_fold,
@@ -283,10 +280,10 @@ def knn_job(log_name, data, attributes, k, validation_fold,
 
         """
         Split the test data into test_set and test_labels.
-    
-        test_labels contains only the class of each test instance 
+
+        test_labels contains only the class of each test instance
         and will be used in accuracy calculation
-    
+
         test_set contains the values need to be used for distance calculation except label
         """
         test_labels = [x[-1] for x in (x for x in test_set)]
