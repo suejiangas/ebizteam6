@@ -10,10 +10,9 @@ To get the predicton result, please run the program with command as follow:
 python knn_test_data_predicate.py {train_data_file_name} {test_data_file_name}
 
 Three argumengs need to be provided:
-
-   argv[0] --> file name of python program
-   argv[1] --> file name of train data
-   argv[2] --> file name of test data
+1. argv[0] --> file name of python program
+2. argv[1] --> file name of train data
+3. argv[2] --> file name of test data
 
 For example, by running command: python knn_test_predicate.py trainProdSelection.arff testProdSelection.arff, the predication result of problem A will be output into the log file.
 
